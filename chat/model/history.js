@@ -1,10 +1,14 @@
-const mongoose = require('mongoose')
+const mongoose  = require('mongoose')
 
 const historySchema = new mongoose.Schema({
     user: { 
-    	ref: 'User' },
+        type: String,
+        required: true,
+     },
     room:{ 
-    	ref: 'Room' },
+        type: String, 
+        required: true, 
+    },
     message: {
         type: String
     },
@@ -14,5 +18,5 @@ const historySchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('History', historySchema);
+module.exports = mongoose.model('Historie', historySchema);
  
